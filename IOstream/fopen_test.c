@@ -16,8 +16,10 @@ int main(int argc, char const *argv[]){
         return : FILE* 结构体指针 表示一个文件
             报错返回NULL
      */
+
     char *filename = "io.txt";
     FILE *ioFile = fopen(filename,"a+");
+    
     if(ioFile == NULL){
         printf("error  文件打开失败\n");
     }else

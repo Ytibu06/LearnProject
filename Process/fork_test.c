@@ -2,10 +2,13 @@
 #include <sys/types.h>
 #include <unistd.h>
 
+//fork()函数：创建一个子进程
+
+
 int main(int argc, char const *argv[]){
 
     //调用fork之前，代码运行在父进程中
-    printf("进程id:%d\n",getpid());
+    printf("本进程id : %d\n",getpid());
 
     //使用fork创建子进程
     /**
@@ -21,14 +24,14 @@ int main(int argc, char const *argv[]){
     //printf("this process id is %d\n", pid);
 
     if(pid<0){
-        printf("新子进程加入失败\n");
+        printf("新进程加入失败\n");
         return 1;
     }else if (pid == 0){
         //执行单独的子进程代码
-        printf("新进程：%d加入成功，为父进程：%d的子进程\n",getpid(),getppid());
+        printf("进程：%d加入成功，为进程：%d的子进程\n",getpid(),getppid());
     }else{
         //执行单独父进程代码
-        printf("父进程%d继续执行，出啊构建了%d\n",getpid(),pid);
+        printf("父进程%d继续执行，构建出子进程%d\n",getpid(),pid);
     }
     
 

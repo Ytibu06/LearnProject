@@ -1,0 +1,8 @@
+child process write to file
+parent process write to file
+child process write to file
+parent process write to file
+parent process write to file
+child process write to file
+parent process write to file
+child process write to file

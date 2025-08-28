@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-// 主函数：简单的进程测试程序
+// 主函数：演示进程阻塞
 // 参数argc：命令行参数个数
 // 参数argv：命令行参数数组
 int main(int argc , const char *argv[] ){
@@ -16,6 +16,9 @@ int main(int argc , const char *argv[] ){
     
     // 打印进程启动信息
     printf("%s进程 : %d启动\n",argv[1], getpid());
+    
+    // 休眠10秒，模拟进程阻塞
+    sleep(10);
 
     return 0;
 }

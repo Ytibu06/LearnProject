@@ -119,3 +119,9 @@ process_test : process_test.c
 	-./$@
 	# 删除生成的process_test可执行文件
 	-rm ./$@
+
+
+unamed_pipe_test : unamed_pipe_test.c
+	-$(CC) -o $@ $^
+	-./$@ "test"
+	-rm ./$@

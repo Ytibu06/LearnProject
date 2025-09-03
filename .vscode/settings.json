@@ -2,6 +2,8 @@
     "files.associations": {
         "floatn.h": "c",
         "string.h": "c",
-        "cstdlib": "c"
+        "cstdlib": "c",
+        "fcntl.h": "c",
+        "stdlib.h": "c"
     }
 }

@@ -121,16 +121,3 @@ process_test : process_test.c
 	-rm ./$@
 
 
-unamed_pipe_test : unamed_pipe_test.c
-	-$(CC) -o $@ $^
-	-./$@ "test"
-	-rm ./$@
-
-
-fifo_read : fifo_read.c
-	-$(CC) -o $@ $^
-
-
-fifo_write : fifo_write.c
-	-$(CC) -o $@ $^
-	

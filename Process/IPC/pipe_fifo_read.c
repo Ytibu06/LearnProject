@@ -7,8 +7,10 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-
+//进程间管道通信 : 管道通信：有名管道fifo
 //有名管道：mkfifo
+//有名管道的打开，读取
+
 /**
  * int mkfifo (const char *__path, __mode_t __mode)
  * 函数功能：创建一个管道

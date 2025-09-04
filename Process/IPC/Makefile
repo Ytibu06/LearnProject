@@ -40,4 +40,8 @@ messageQueue_producer : messageQueue_producer.c
 messageQueue_consumer : messageQueue_consumer.c
 	-$(CC) -o $@ $^
 
-	
+
+signal : signal.c	
+	-$(CC) -o $@ $^
+	-./$@ "test"
+	-rm ./$@

@@ -31,4 +31,13 @@ message_queue : message_queue.c
 	-$(CC) -o $@ $^
 	-./$@ "test"
 	-rm ./$@
+
+
+messageQueue_producer : messageQueue_producer.c
+	-$(CC) -o $@ $^
+
+
+messageQueue_consumer : messageQueue_consumer.c
+	-$(CC) -o $@ $^
+
 	

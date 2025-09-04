@@ -7,6 +7,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <sys/wait.h>
+#define CLOCK_REALTIME 0
 
 //进程间通信：消息队列messageQueue
 
@@ -77,7 +78,7 @@ int main(int argc, char *argv[]){
             //清空buf
             memset(send_buf, 0, sizeof(send_buf));
             
-            //获取当前时间 CLOCK_REALTIME = 0
+            //获取当前时间 CLOCK_REALTIME = 0  
             clock_gettime(0, &time_info);
             
             // 使用正确的时间值构建消息

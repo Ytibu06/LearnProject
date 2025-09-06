@@ -5,7 +5,7 @@
 #include <string.h>
 #include <math.h>
 
-// 线程的退出：return, pthread_exit, pthread_cancel, pthread_detach, pthread_join
+// 线程的退出：pthread_join
 
 
 //接收结果的结构体

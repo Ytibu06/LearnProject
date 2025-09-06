@@ -6,7 +6,7 @@ pthread_create : pthread_create.c
 	-rm ./$@
 
 
-pthread_exit : pthread_exit.c
+pthread_join : pthread_join.c
 	-$(CC) -o $@ $^
 	-./$@ "test"
 	-rm ./$@

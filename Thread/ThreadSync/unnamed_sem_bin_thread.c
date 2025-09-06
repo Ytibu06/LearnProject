@@ -3,9 +3,10 @@
 #include <pthread.h>
 #include <semaphore.h>
 
-//无名信号量实现互斥锁功能
-//int sem_init (sem_t *__sem, int __pshared, unsigned int __value);
+//无名信号量作为二进制信号量 实现互斥锁功能, 解决线程间的同步问题
 
+
+//int sem_init (sem_t *__sem, int __pshared, unsigned int __value);
 /**
  * @brief 初始化一个未命名的 POSIX 信号量
  * 
@@ -67,7 +68,7 @@ void *plusOne(void *arg)
 
 int main(int argc, char *argv[])
 {
-    sem_init(&unnamed_sem, 0, 1);
+    sem_init(&unnamed_sem, 0, 1);   // 初始化二进制信号量
 
     pthread_t tid[10000];
 

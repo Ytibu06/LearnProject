@@ -2,9 +2,11 @@
 #include <stdlib.h>
 #include <pthread.h>
 #include <unistd.h>
-#define THREAD_COUNT 20000
+
 //线程锁：互斥锁mutex
 
+
+#define THREAD_COUNT 20000
 // 初始化互斥锁
 static pthread_mutex_t counter_mutex = PTHREAD_MUTEX_INITIALIZER;
 

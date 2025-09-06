@@ -23,16 +23,17 @@
 char *buf;
 
 //写线程的执行函数
-void *intput_thread(void *arg){
-
+void *intput_thread(void *arg)
+{
     while(1){
         fgets(buf, BUF_LEN, stdin);
     }
+    return NULL;
 }
 
 //读线程的执行函数
-void *output_thread(void *arg){
-
+void *output_thread(void *arg)
+{
     int i = 0;
     while(1){
         if(buf[i]){
@@ -48,6 +49,7 @@ void *output_thread(void *arg){
         }
         
     }
+    return NULL;
 }
 
 int main(int argc, char *argv[]){

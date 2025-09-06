@@ -18,13 +18,46 @@ pthread_rwlock_hungry : pthread_rwlock_hungry.c
 	-rm ./$@
 
 
-pthread_spinlock : pthread_spinlock.c
+pthread_mutex_condvar : pthread_mutex_condvar.c
 	-$(CC) -o $@ $^
 	-./$@ "test"
 	-rm ./$@
 
 
-unnamed_sem : unnamed_sem.c
+unnamed_sem_bin_thread : unnamed_sem_bin_thread.c
 	-$(CC) -o $@ $^
 	-./$@ "test"
 	-rm ./$@
+
+
+unnamed_sem_bin_process : unnamed_sem_bin_process.c
+	-$(CC) -o $@ $^
+	-./$@ "test"
+	-rm ./$@
+
+
+unnamed_sem_count_thread : unnamed_sem_count_thread.c
+	-$(CC) -o $@ $^
+	-./$@ "test"
+	-rm ./$@
+
+unnamed_sem_count_process : unnamed_sem_count_process.c
+	-$(CC) -o $@ $^
+	-./$@ "test"
+	-rm ./$@
+
+
+named_sem_bin_process : named_sem_bin_process.c
+	-$(CC) -o $@ $^
+	-./$@ "test"
+	-rm ./$@
+
+
+named_sem_count_process : named_sem_count_process.c
+	-$(CC) -o $@ $^
+	-./$@ "test"
+	-rm ./$@
+
+
+clean :
+	-rm *.o

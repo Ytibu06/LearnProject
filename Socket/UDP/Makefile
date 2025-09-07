@@ -7,3 +7,6 @@ udp_server : udp_server.c
 
 udp_client : udp_client.c
 	-$(CC) -o $@ $^
+
+clean :
+	-rm udp_server udp_client

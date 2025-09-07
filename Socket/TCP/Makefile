@@ -40,3 +40,14 @@ multi_conn_server_process : multi_conn_server_process.c
 
 multi_conn_client_process : multi_conn_client_process.c
 	-$(CC) -o $@ $^
+
+clean:
+	-rm  multi_conn_client_process
+	-rm  multi_conn_server_process
+	-rm  multi_conn_client_thread
+	-rm  multi_conn_server_thread
+	-rm  single_conn_client
+	-rm  single_conn_server
+	-rm  multi_conn_client
+	-rm  multi_conn_server
+	-rm  test.txt

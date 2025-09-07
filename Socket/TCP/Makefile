@@ -23,3 +23,12 @@ is_buffer : is_buffer.c
 	-$(CC) -o $@ $^
 	-./$@
 	-rm ./$@
+
+
+multi_conn_server_thread : multi_conn_server_thread.c
+	-$(CC) -o $@ $^
+
+
+multi_conn_client_thread : multi_conn_client_thread.c
+	-$(CC) -o $@ $^
+

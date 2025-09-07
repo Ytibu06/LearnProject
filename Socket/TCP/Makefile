@@ -19,6 +19,7 @@ single_conn_server : single_conn_server.c
 single_conn_client : single_conn_client.c
 	-$(CC) -o $@ $^
 
+
 is_buffer : is_buffer.c
 	-$(CC) -o $@ $^
 	-./$@
@@ -32,3 +33,10 @@ multi_conn_server_thread : multi_conn_server_thread.c
 multi_conn_client_thread : multi_conn_client_thread.c
 	-$(CC) -o $@ $^
 
+
+multi_conn_server_process : multi_conn_server_process.c
+	-$(CC) -o $@ $^
+
+
+multi_conn_client_process : multi_conn_client_process.c
+	-$(CC) -o $@ $^
